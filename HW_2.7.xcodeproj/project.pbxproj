@@ -16,6 +16,7 @@
 		D10EE094273A404200BBF2BF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE093273A404200BBF2BF /* Person.swift */; };
 		D10EE096273A455B00BBF2BF /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE095273A455B00BBF2BF /* PersonListViewController.swift */; };
 		D10EE098273A4D0100BBF2BF /* PersonListWithDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE097273A4D0100BBF2BF /* PersonListWithDetailsViewController.swift */; };
+		D10EE09A273A875100BBF2BF /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE099273A875100BBF2BF /* PersonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D10EE093273A404200BBF2BF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D10EE095273A455B00BBF2BF /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		D10EE097273A4D0100BBF2BF /* PersonListWithDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListWithDetailsViewController.swift; sourceTree = "<group>"; };
+		D10EE099273A875100BBF2BF /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				D10EE095273A455B00BBF2BF /* PersonListViewController.swift */,
 				D10EE097273A4D0100BBF2BF /* PersonListWithDetailsViewController.swift */,
+				D10EE099273A875100BBF2BF /* PersonDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				D10EE098273A4D0100BBF2BF /* PersonListWithDetailsViewController.swift in Sources */,
 				D10EE096273A455B00BBF2BF /* PersonListViewController.swift in Sources */,
 				D10EE07A273A3E3D00BBF2BF /* AppDelegate.swift in Sources */,
+				D10EE09A273A875100BBF2BF /* PersonDetailViewController.swift in Sources */,
 				D10EE07C273A3E3D00BBF2BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

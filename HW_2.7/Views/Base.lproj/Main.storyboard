@@ -24,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="KC2-9h-iFN" kind="show" id="JI1-yt-0Zh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,20 +40,54 @@
             </objects>
             <point key="canvasLocation" x="904" y="-274"/>
         </scene>
-        <!--View Controller-->
+        <!--Person Detail View Controller-->
         <scene sceneID="d46-wf-9Jg">
             <objects>
-                <viewController id="KC2-9h-iFN" sceneMemberID="viewController">
+                <viewController id="KC2-9h-iFN" customClass="PersonDetailViewController" customModule="HW_2_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zn1-gx-tx1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5MY-Vp-hZq">
+                                <rect key="frame" x="20" y="160" width="374" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xka-61-0gb">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVr-VZ-Tnt">
+                                        <rect key="frame" x="0.0" y="29.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zLz-6A-37s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="av2-x2-AmP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5MY-Vp-hZq" firstAttribute="top" secondItem="av2-x2-AmP" secondAttribute="top" constant="20" id="3Fc-c6-KeD"/>
+                            <constraint firstItem="5MY-Vp-hZq" firstAttribute="leading" secondItem="av2-x2-AmP" secondAttribute="leading" constant="20" id="9bg-77-R4B"/>
+                            <constraint firstItem="av2-x2-AmP" firstAttribute="trailing" secondItem="5MY-Vp-hZq" secondAttribute="trailing" constant="20" id="rxY-TC-XNR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="udT-wn-RFB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IWu-uS-IEd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="cVr-VZ-Tnt" id="WAr-M6-gaM"/>
+                        <outlet property="phoneLabel" destination="xka-61-0gb" id="XYN-7n-joA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBz-fZ-FJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="-275"/>
+            <point key="canvasLocation" x="1742.0289855072465" y="-275.22321428571428"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="HTW-Fv-BhJ">
