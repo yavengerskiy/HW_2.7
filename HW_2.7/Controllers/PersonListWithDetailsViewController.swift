@@ -8,15 +8,17 @@
 import UIKit
 
 class PersonListWithDetailsViewController: UITableViewController {
-    private let personlist = Person.getRandomPersonList()
+    private let model = DataManager.globalInstance
+    private var personList: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        personList = model.personsList
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        personlist.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +26,7 @@ class PersonListWithDetailsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        personlist[section].fullName
+        personList[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,10 +35,10 @@ class PersonListWithDetailsViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         if indexPath.row == 0 {
-            content.text = personlist[indexPath.section].phoneNumber
+            content.text = personList[indexPath.section].phoneNumber
             content.image = UIImage.init(systemName: "phone")
         } else {
-            content.text = personlist[indexPath.section].email
+            content.text = personList[indexPath.section].email
             content.image = UIImage.init(systemName: "tray")
         }
         
