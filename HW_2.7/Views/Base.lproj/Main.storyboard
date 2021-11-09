@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,13 +11,13 @@
         <!--Persons List-->
         <scene sceneID="SIt-UG-mdy">
             <objects>
-                <tableViewController id="8We-yn-WSQ" sceneMemberID="viewController">
+                <tableViewController id="8We-yn-WSQ" customClass="PersonListViewController" customModule="HW_2_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zhB-7D-t1w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personContact" id="CCO-KC-CQD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" id="CCO-KC-CQD">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CCO-KC-CQD" id="tLf-RA-JLo">
@@ -35,6 +36,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9np-QS-RsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="904" y="-274"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d46-wf-9Jg">
+            <objects>
+                <viewController id="KC2-9h-iFN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zn1-gx-tx1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="av2-x2-AmP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBz-fZ-FJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-275"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="HTW-Fv-BhJ">
@@ -71,16 +87,16 @@
             </objects>
             <point key="canvasLocation" x="-887" y="56"/>
         </scene>
-        <!--PersonsList-->
+        <!--Persons List-->
         <scene sceneID="P8q-sJ-7RA">
             <objects>
-                <tableViewController id="HQm-s5-OvX" sceneMemberID="viewController">
+                <tableViewController id="HQm-s5-OvX" customClass="PersonListWithDetailsViewController" customModule="HW_2_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rSq-lW-ird">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ALm-Kt-gwb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personwithdetails" id="ALm-Kt-gwb">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ALm-Kt-gwb" id="3hJ-EE-uvr">
@@ -94,7 +110,7 @@
                             <outlet property="delegate" destination="HQm-s5-OvX" id="vji-Kv-Zu1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PersonsList" id="NxR-Da-Roi"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="NxR-Da-Roi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pko-vo-bB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
