@@ -11,11 +11,9 @@ class PersonListViewController: UITableViewController {
     private let model = DataManager.globalInstance
     private var personList: [Person] = DataManager.globalInstance.personsList
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         personList = model.personsList
-
     }
 
     // MARK: - Table view data source
