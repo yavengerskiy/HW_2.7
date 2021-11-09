@@ -12,11 +12,9 @@ class PersonListWithDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         personlist.count
     }
@@ -28,7 +26,6 @@ class PersonListWithDetailsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         personlist[section].fullName
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personwithdetails", for: indexPath)
@@ -43,13 +40,8 @@ class PersonListWithDetailsViewController: UITableViewController {
             content.image = UIImage.init(systemName: "tray")
         }
         
-    
         cell.contentConfiguration = content
         
         return cell
     }
-    // MARK: - Navigation
-    
-    
-    
 }

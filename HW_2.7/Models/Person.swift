@@ -19,12 +19,24 @@ struct Person {
 extension Person {
     static func getRandomPersonList() -> [Person] {
         var randomPersonList: [Person] = []
+        let dataManager = DataManager()
         
-        for _ in 0...10 {
-            let person = Person(firstName: DataManager.firstName[Int.random(in: 0..<DataManager.firstName.count)],
-                                lastName: DataManager.lastName[Int.random(in: 0..<DataManager.lastName.count)],
-                                phoneNumber: DataManager.phoneNumber[Int.random(in: 0..<DataManager.phoneNumber.count)],
-                                email: DataManager.email[Int.random(in: 0..<DataManager.email.count)])
+        for _ in 0..<10 {
+            let firstNameRandomIndex = Int.random(in: 0..<dataManager.firstName.count)
+            let lastNameRandomIndex = Int.random(in: 0..<dataManager.lastName.count)
+            let phoneRandomIndex = Int.random(in: 0..<dataManager.phoneNumber.count)
+            let emailRandomIndex = Int.random(in: 0..<dataManager.email.count)
+            
+            let person = Person(firstName: dataManager.firstName[firstNameRandomIndex],
+                                lastName: dataManager.lastName[lastNameRandomIndex],
+                                phoneNumber: dataManager.phoneNumber[phoneRandomIndex],
+                                email: dataManager.email[emailRandomIndex])
+            
+            dataManager.firstName.remove(at: firstNameRandomIndex)
+            dataManager.lastName.remove(at: lastNameRandomIndex)
+            dataManager.phoneNumber.remove(at: phoneRandomIndex)
+            dataManager.email.remove(at: emailRandomIndex)
+            
             
             randomPersonList.append(person)
         }

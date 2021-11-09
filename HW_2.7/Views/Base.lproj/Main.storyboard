@@ -77,8 +77,8 @@
                             <constraint firstItem="av2-x2-AmP" firstAttribute="trailing" secondItem="5MY-Vp-hZq" secondAttribute="trailing" constant="20" id="rxY-TC-XNR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="udT-wn-RFB">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="IWu-uS-IEd"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="udT-wn-RFB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="p5o-g7-uLn"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="cVr-VZ-Tnt" id="WAr-M6-gaM"/>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBz-fZ-FJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742.0289855072465" y="-275.22321428571428"/>
+            <point key="canvasLocation" x="1600" y="-275"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="HTW-Fv-BhJ">

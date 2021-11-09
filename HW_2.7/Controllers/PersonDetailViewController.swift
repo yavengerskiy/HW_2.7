@@ -18,8 +18,8 @@ class PersonDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = person.fullName
-        phoneLabel.text = "Phone: \(person.phoneNumber)"
-        emailLabel.text = "Phone: \(person.email)"
+        phoneLabel.text = "Phone: +\(person.phoneNumber)"
+        emailLabel.text = "E-mail: \(person.email)"
     }
     
 }
