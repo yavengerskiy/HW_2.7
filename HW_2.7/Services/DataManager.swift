@@ -12,7 +12,7 @@ class DataManager {
     
     var firstNames = ["Aleksandr", "Mihail", "Dmitrij", "Ivan",
                       "Daniil", "Roman", "Kirill", "Timofej",
-                      "Egor", "Matvej", "Ivan", "Petr"]
+                      "Egor", "Matvej", "Dmitriy", "Petr"]
     
     var lastNames = ["Ivanov", "Vasil'ev", "Petrov", "Smirnov",
                      "Mihajlov", "Fyodorov", "Sokolov", "YAkovlev",
