@@ -42,7 +42,7 @@ class DataManager {
                                 phoneNumber: phoneNumber,
                                 email: email)
             
-            self.personsList.append(person)
+            personsList.append(person)
         }
     }
 }
